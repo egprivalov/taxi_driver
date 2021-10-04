@@ -1,6 +1,6 @@
-n=int(input())
-rasst=list(map(int, input().split()))
-tarifs=list(map(int,input().split()))
+n=int(input("Введите n: "))
+rasst=list(map(int, input("Введите n расстояний через пробел:\n").split()))
+tarifs=list(map(int,input("Введите n тарифов через пробел:\n").split()))
 
 rasst_sorted=sorted(rasst)
 tarifs_sorted=sorted(tarifs, reverse=True)
