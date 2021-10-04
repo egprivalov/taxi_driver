@@ -1,5 +1,7 @@
 n=int(input("Введите n: "))
 check=False
+rasst=[]
+tarifs=[]
 while not check:
     rasst=list(map(int, input("Введите n расстояний через пробел:\n").split()))
     if n == len(rasst):
@@ -14,13 +16,19 @@ while not check:
     else:
         print("Количество тарифов не совпадает с n")
 
-rasst_sorted=sorted(rasst)
-tarifs_sorted=sorted(tarifs, reverse=True)
+rasst_sorted=[]
+tarifs_sorted=[]
+for i in range(n):
+    rasst_sorted.append((i,rasst[i]))
+    tarifs_sorted.append((i,tarifs[i]))
+
+rasst_sorted=sorted(rasst_sorted, key=lambda i: i[1])
+tarifs_sorted=sorted(tarifs_sorted, key=lambda i: i[1], reverse=True)
 
 out=[0]*n
 
 for i in range(n):
-    out[rasst.index(rasst_sorted[i])]=tarifs.index(tarifs_sorted[i])+1
+    out[rasst_sorted[i][0]] = tarifs_sorted[i][0] + 1
 
 for i in range(n):
     print(f"{i+1}-й сотрудник должен уехать на {out[i]}-й машине")
