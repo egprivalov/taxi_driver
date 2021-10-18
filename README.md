@@ -7,6 +7,7 @@ ____
 По введенным данным-выдает решение задачи с минимальными затратами средств.
 ____
 ![image](https://user-images.githubusercontent.com/44251572/135811266-ac44eec3-50d0-4541-8c7e-db420fc32609.png)
+![image](https://user-images.githubusercontent.com/44251572/137695763-aa91a290-5142-4895-ad02-814fd31e8836.png)
 ____
 Программа написана на языке Python 3.8, с использованием среды разработки PyCharm
 ____
