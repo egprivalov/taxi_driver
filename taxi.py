@@ -24,18 +24,18 @@ while not check:
         print(f"Количество расстояний не {n}")
 
     # Проверка соответствия формату данных
-    for i in range(len(rasst)):
-        try:
-            rasst[i] = int(rasst[i])
-        except ValueError:
-            uncorrect_numbers+=str(i+1)+' '
-            check=False
-    if not check:
-        if len(uncorrect_numbers.split()) > 1:
-
-            print(f"Неккоректные расстояния под номерами: {uncorrect_numbers}")
-        else:
-            print(f"Некорректное расстояние под номером {uncorrect_numbers.split()[0]}")
+    if check:
+        for i in range(len(rasst)):
+            try:
+                rasst[i] = int(rasst[i])
+            except ValueError:
+                uncorrect_numbers+=str(i+1)+' '
+                check=False
+        if not check:
+            if len(uncorrect_numbers.split()) > 1:
+                print(f"Неккоректные расстояния под номерами: {uncorrect_numbers}")
+            else:
+                print(f"Некорректное расстояние под номером {uncorrect_numbers.split()[0]}")
 
 # Ввод тарифов и обработка неккоректного ввода
 check=False
@@ -50,18 +50,18 @@ while not check:
         print(f"Количество тарифов не {n}")
 
     # Проверка соответствия формату данных
-    for i in range(len(tarifs)):
-        try:
-            tarifs[i] = int(tarifs[i])
-        except ValueError:
-            uncorrect_numbers += str(i+1)+' '
-            check = False
-    if not check:
-        if len(uncorrect_numbers.split()) > 1:
-
-            print(f"Неккоректные тарифы под номерами: {uncorrect_numbers}")
-        else:
-            print(f"Некорректный тариф под номером {uncorrect_numbers.split()[0]}")
+    if check:
+        for i in range(len(tarifs)):
+            try:
+                tarifs[i] = int(tarifs[i])
+            except ValueError:
+                uncorrect_numbers += str(i+1)+' '
+                check = False
+        if not check:
+            if len(uncorrect_numbers.split()) > 1:
+                print(f"Неккоректные тарифы под номерами: {uncorrect_numbers}")
+            else:
+                print(f"Некорректный тариф под номером {uncorrect_numbers.split()[0]}")
 
 rasst_sorted=[]  # Массив отсортированных расстояний
 tarifs_sorted=[]  # Массив отсортированных тарифов
